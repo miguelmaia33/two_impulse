@@ -1,7 +1,6 @@
 import csv
 
 table = []
-#temp = []
 with open('taxi-data.csv','r') as tdata, open('taxi_days.csv','w', newline='') as t_days:
     reader=csv.reader(tdata)
     writer=csv.writer(t_days)
@@ -9,16 +8,13 @@ with open('taxi-data.csv','r') as tdata, open('taxi_days.csv','w', newline='') a
     for row in reader:
         table.append(row)
         rows+=1
-    
-#SubscriptionID -> 2; Quantity -> 7; QuantityDrop -> 28; %Active -> 36;
-    #print(table[0])
         
+
     writer.writerow(['day', 'trips','passenger_count', 'trip_time_in_secs', 'trip_distance', 'fare_amount'])
 
     line=1
     days=0
-    #firstIDPointer=line
-    #print(table[line][6])
+
     while line<(rows):#limite rows-7
       total_fare=0
       passanger=0
@@ -38,7 +34,6 @@ with open('taxi-data.csv','r') as tdata, open('taxi_days.csv','w', newline='') a
       if(line==rows):
         writer.writerow([days, trip, passanger, trip_time, trip_distance, total_fare])
         break
-      #print(trip_distance)
       writer.writerow([days, trip, passanger, trip_time, trip_distance, total_fare])
 print('end')          
         
