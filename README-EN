@@ -1,6 +1,0 @@
-# README
-I used LibreOffice Calc to open and see the dataset. 
-
-It is not required to have Python installed as the generated file is in the same folder as the original dataset.
-
-To run the program you need to install Knime Software. The files KNIME_two_impulse_fare.knwf and KNIME_two_impulse_trip.knwf will install the extensions needed to run the program. It may be necessary to change the path where the program reads the dataset. To do this, click "File Reader" and change the directory to where the dataset is located. Then right-click on the last "box" named "H2O MOJO Predictor (Regression)" and click execute. When the program finishes, click the same box again and click predicted data.
